@@ -27,6 +27,7 @@ else {
                 col.eachCell(c => {
                     let _index = -1
                     let fill = {};
+                    // adding the fill style to array
                     fill["type"] = c.fill.type==undefined || c.fill.type==null || c.fill.type=="none"?"":c.fill.type
                     fill["pattern"] = c.fill.pattern==undefined || c.fill.pattern==null || c.fill.pattern=="none"?"":c.fill.pattern
                     fill["bgcolor"] = c.fill.bgColor==undefined || c.fill.bgColor==null || c.fill.bgColor=="none"?"":c.fill.bgColor.argb
@@ -44,6 +45,7 @@ else {
                         _index = obj["styles"].length-1
                     }
         
+                    // adding cell values
                     let val = "";
                     if(c.value == undefined || c.value==null)
                         val=""
